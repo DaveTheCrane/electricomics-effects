@@ -1,0 +1,29 @@
+{
+    "config": {
+        "buttons": [
+            {
+                "action": "elcx:toggleAudio",
+                "type": "sound"
+            },
+            {
+                "action": "elcx:hint",
+                "type": "hint"
+            }
+        ],
+        "features": [
+            "tap"
+        ],
+        "orientation": "landscape"
+    },
+    "creators": [
+        {
+            "name": "Dave Crane",
+            "role": "Head Chef"
+        }
+    ],
+    "publish_date": "23/07/2017",
+    "slug": "electricomics-comic",
+    "summary": "Sampler of animation effects for Electricomics",
+    "title": "Electricomics Effects Demo",
+    "version": 1
+}

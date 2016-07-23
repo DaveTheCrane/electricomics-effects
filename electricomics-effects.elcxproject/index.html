@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="vh-bottom">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="expires" content="-1">
+  <meta http-equiv="expires" content="-1">
+  <meta name="robots" content="noindex">
+  <title>Electricomics Comic</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style type="text/css">
+      div.white-curtain{
+        color: #036;
+        text-transform: lowercase;
+        background: url("images/earth6.jpg") center left no-repeat #fff;
+      }
+  </style>
+</head>
+<body>
+
+<ec-curtains>
+  <div class="loading white-curtain">loading</div>
+  <div class="start white-curtain">tap to start</div>
+</ec-curtains>
+
+<ec-comic id="comic" style="width:1024px; height:768px;">
+
+  <!-- 1x1 grid -->
+  <ec-page id="step-1" data-next="step-2" class="step" data-after-show="transform">
+    <ec-panel id="panel-1-header" style="width:200px; height:150px; left:412px; top:94px; z-index:1; text-align:center">
+      <h1>This is not a comic</h1>
+    </ec-panel>
+    <ec-panel id="panel-1-1" style="width:200px; height:200px; left:412px; top:284px; z-index:1;" data-transform='{ "action":"flipbook", "interval": 0.7, "repeats":-1 }'>
+      <img src="images/blank.jpg">
+      <img src="images/king1.jpg" style="display:none">
+      <img src="images/king2.jpg" style="display:none">
+      <img src="images/king3.jpg" style="display:none">
+      <img src="images/king4.jpg" style="display:none">
+    </ec-panel>
+    <ec-panel id="panel-1-header" style="width:200px; height:150px; left:412px; top:504px; z-index:1;">
+      <p>but rather, a series of demos that show what can be done by adding the effects library to an electricomic</p>
+      <p>The panel above has a "flipbook" effect applied to it</p>
+    </ec-panel>
+  </ec-page>
+
+  <!-- 3x3 grid -->
+  <ec-page id="step-2" data-next="step-3" class="step" data-after-show="transform">
+    <ec-panel id="panel-2-1" style="width:200px; height:200px; left:174px; top:44px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "rotate":"180deg", "delay":1000 }}'>
+      <img src="images/earth0.jpg">
+    </ec-panel>
+    <ec-panel id="panel-2-2" style="width:200px; height:200px; left:402px; top:44px; z-index:1;">
+      <img src="images/earth1.jpg">
+    </ec-panel>
+    <ec-panel id="panel-2-2" style="width:200px; height:200px; left:632px; top:44px; z-index:1;">
+      <p>The "transition" effect is extremely flexible, because it calls out to native HTML and CSS animation capabilities.</p>
+      <p>This page uses it to rotate some of the panels.</p>
+    </ec-panel>
+    <ec-panel id="panel-2-4" style="width:200px; height:200px; left:174px; top:274px; z-index:1;">
+      <img src="images/earth3.jpg">
+    </ec-panel>
+    <ec-panel id="panel-2-5" style="width:200px; height:200px; left:402px; top:274px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "rotate":"-90deg", "delay":2000 }}'>
+      <img src="images/earth4.jpg">
+    </ec-panel>
+    <ec-panel id="panel-2-6" style="width:200px; height:200px; left:632px; top:274px; z-index:1;">
+      <img src="images/earth5.jpg">
+    </ec-panel>
+    <ec-panel id="panel-2-7" style="width:200px; height:200px; left:174px; top:504px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "rotate":"6deg", "delay":4000 }}'>
+      <img src="images/blank.jpg">
+    </ec-panel>
+    <ec-panel id="panel-2-8" style="width:200px; height:200px; left:402px; top:504px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "rotate":"-15deg", "delay":4000 }}'>
+      <img src="images/blank.jpg">
+    </ec-panel>
+    <ec-panel id="panel-2-9" style="width:200px; height:200px; left:632px; top:504px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "rotate":"-10deg", "delay":4000 }}'>
+      <img src="images/scales.jpg">
+    </ec-panel>
+  </ec-page>
+
+  <!-- 3x3 grid -->
+  <ec-page id="step-3" data-next="step-4" class="step" data-after-show="transform">
+    <ec-panel id="panel-3-1" style="width:200px; height:200px; left:174px; top:44px; z-index:2;" data-transform='{ "action":"transition", "transit":{ "left":"402", "delay":1000 }}'>
+      <img src="images/earth0.jpg">
+    </ec-panel>
+    <ec-panel id="panel-3-2" style="width:200px; height:200px; left:402px; top:44px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "top":"274", "delay":1800 }}'>
+      <img src="images/earth1.jpg">
+    </ec-panel>
+    <ec-panel id="panel-3-2" style="width:200px; height:200px; left:632px; top:44px; z-index:1;">
+      <img src="images/earth6.jpg">
+    </ec-panel>
+    <ec-panel id="panel-3-4" style="width:200px; height:200px; left:174px; top:274px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "top":"44", "delay":2200 }}'>
+      <img src="images/earth3.jpg">
+    </ec-panel>
+    <ec-panel id="panel-3-5" style="width:200px; height:200px; left:402px; top:274px; z-index:2;" data-transform='{ "action":"transition", "transit":{ "left":"174", "delay":1000 }}'>
+      <img src="images/earth4.jpg">
+    </ec-panel>
+    <ec-panel id="panel-3-6" style="width:200px; height:200px; left:632px; top:274px; z-index:1;">
+      <img src="images/earth5.jpg">
+    </ec-panel>
+    <ec-panel id="panel-3-7" style="width:200px; height:200px; left:174px; top:504px; z-index:1;"'>
+      <p>Transition also supports moving panels around on the page</p>
+    </ec-panel>
+    <ec-panel id="panel-3-8" style="width:200px; height:200px; left:402px; top:504px; z-index:1;"'>
+      <img src="images/blank.jpg">
+    </ec-panel>
+    <ec-panel id="panel-3-9" style="width:200px; height:200px; left:632px; top:1504px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "top":"504px", "delay":4000 }}'>
+      <img src="images/scales.jpg">
+    </ec-panel>
+  </ec-page>
+
+    <!-- 3x3 grid -->
+  <ec-page id="step-4" class="step" data-after-show="transform">
+    <ec-panel id="panel-4-1" style="width:200px; height:200px; left:174px; top:44px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "rotate:":"180deg", "delay":1000 }}'>
+      <img src="images/earth0.jpg">
+    </ec-panel>
+    <ec-panel id="panel-4-2" style="width:200px; height:200px; left:402px; top:44px; z-index:1;">
+      <img src="images/earth1.jpg">
+    </ec-panel>
+    <ec-panel id="panel-4-2" style="width:200px; height:200px; left:632px; top:44px; z-index:1;">
+      <img src="images/earth5.jpg">
+    </ec-panel>
+    <ec-panel id="panel-4-4" style="width:200px; height:200px; left:174px; top:274px; z-index:1;">
+      <img src="images/earth3.jpg">
+    </ec-panel>
+    <ec-panel id="panel-4-5" style="width:200px; height:200px; left:402px; top:274px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "rotate":"-90deg", "delay":1000 }}'>
+      <img src="images/earth4.jpg">
+    </ec-panel>
+    <ec-panel id="panel-4-6" style="width:200px; height:200px; left:632px; top:274px; z-index:1;">
+      <img src="images/earth5.jpg">1
+    </ec-panel>
+    <ec-panel id="panel-4-7" style="width:200px; height:200px; left:174px; top:504px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "rotate":"6deg", "top":"644", "delay":1000 }}'>
+      <img src="images/blank.jpg">
+    </ec-panel>
+    <ec-panel id="panel-4-8" style="width:200px; height:200px; left:402px; top:504px; z-index:1;" data-transform='{ "action":"transition", "transit":{ "rotate":"-15deg", "left":"174", "delay":1000 }}'>
+      <p>...and scaling of images as well.</p>
+      <p>Images borrowed from my <a href='https://improvisedcomics.co.uk/category/what_is_home/'>What Is Home?</a> exhibition, supporting Kendal YWCA, re-showing Oct 2016</p>
+    </ec-panel>
+    <ec-panel id="panel-4-9" style="width:200px; height:200px; left:632px; top:504px; z-index:2;" data-transform='{ "action":"transition", "transit":{ "left":"392", "top":"264", "width":"450", "height":"450", "delay":1000 }}'>
+      <img src="images/scales.jpg">
+    </ec-panel>
+  </ec-page>
+
+</ec-comic>
+
+
+<script src="js/electricomics.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/raf.js"></script>
+<script src="js/picturefill.min.js"></script>
+<script src="js/comic2.js"></script>
+<script src="js/transforms.js"></script>
+
+<script>
+/* global CreateDigitalComic */
+var comicJSON = {
+  storage: false,
+  zoom: false,
+  id: 'xec-big-nemo',
+  width: 1024,
+  height: 768,
+  transitionIn: 'normal',
+  transitionOut: 'normal'
+};
+var comic;
+
+window.onload = function() {
+  comic = new CreateDigitalComic(comicJSON);
+  comic.start();
+
+  window.onresize = function() {
+    requestAnimationFrame(comic.resize);
+  };
+};
+</script>
+
+</body>
+</html>
