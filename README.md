@@ -24,9 +24,9 @@ Sorry, there's no support for this in the generator tool (yet!) You'll need to g
 
 * edit index.html as follows
 
-  * replace the <script> tag for comic.js with comic2.js
+  * replace the script tag for comic.js with comic2.js
 
-  * add a <script> tag for transforms.js afterwards
+  * add a script tag for transforms.js afterwards
 
   * add data-transform attributes to the ec-panel tags. Unzip this project and have a look at the examples.
   
