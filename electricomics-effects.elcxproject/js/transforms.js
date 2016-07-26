@@ -7,6 +7,7 @@ http://twitter.com/davethecrane
 ************ */
 
 //quick jquery plugin to animate rotations
+//http://stackoverflow.com/questions/15191058/css-rotation-cross-browser-with-jquery-animate (user yckart's snippet)
 $.fn.animateRotate = function(angle, duration, easing, complete) {
   return this.each(function() {
     var $elem = $(this);
@@ -35,6 +36,26 @@ stepActions.transform = function(){
   }    
 }
 
+//function to repeat an ection multiple times, with initial delay etc.
+//http://jsfiddle.net/NdhCR/
+function repeat(callback, interval, repeats, immediate) {
+    var timer, trigger;
+    trigger = function() {
+        callback();
+        --repeats || clearInterval(timer);
+    };
+
+    interval = interval <= 0 ? 1000 : interval; // default: 1000ms
+    repeats = parseInt(repeats, 10) || 0; // default: repeat forever
+    timer = setInterval(trigger, interval);
+
+    if ( !! immediate) { // Coerce boolean
+        trigger();
+    }
+
+    return timer;
+}
+
 var processTransform = function (panel,page){
   //console.log(panel, page);
   var transformData = panel.data("transform");
@@ -52,18 +73,25 @@ var danceSteps={
       var timings={
         duration: transit.duration || 1000,
         iterations: transit.iterations || 1,
-        delay: transit.delay || 0
+        delay: transit.delay || 0,
+        interval: transit.interval || transit.duration || 1000
       }
       delete transit.duration;
       delete transit.iterations;
       delete transit.delay;
-      if (transit.rotate){
-        p = p.animateRotate(transit.rotate);
-        delete transit.rotate;
+      delete transit.interval;
+      var doAnimStep = function(){
+        if (transit.rotate){
+          p = p.animateRotate(transit.rotate, timings.duration);
+          delete transit.rotate;
+        }
+        if (Object.keys(transit).length>0){
+          p = p.animate(transit, timings);
+        }
       }
-      if (Object.keys(transit).length>0){
-        p = p.animate(transit, timings);
-      }
+      setTimeout(function(){
+        repeat(doAnimStep,timings.interval, timings.iterations, true);
+      }, timings.delay);
     }
   },
   flipbook:function(panel, page, data){

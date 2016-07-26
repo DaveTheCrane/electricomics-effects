@@ -21,9 +21,9 @@
             "role": "Head Chef"
         }
     ],
-    "publish_date": "23/07/2017",
+    "publish_date": "26/07/2017",
     "slug": "electricomics-comic",
     "summary": "Sampler of animation effects for Electricomics",
     "title": "Electricomics Effects Demo",
-    "version": 1
+    "version": "1.0.1"
 }
